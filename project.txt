@@ -1,1 +1,388 @@
-html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #0f172a;
+            color: white;
+            line-height: 1.6;
+        }
+
+        /* Navbar */
+        nav {
+            height: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 8%;
+            background: #020617;
+            position: sticky;
+            top: 0;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #38bdf8;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #38bdf8;
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: #38bdf8;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #cbd5e1;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #38bdf8;
+            color: #020617;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #0ea5e9;
+            transform: translateY(-3px);
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 35px;
+            margin-bottom: 40px;
+            color: #38bdf8;
+        }
+
+        /* About */
+        .about {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+            color: #cbd5e1;
+            font-size: 18px;
+        }
+
+        /* Skills */
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+        }
+
+        .skill {
+            background: #1e293b;
+            padding: 25px;
+            text-align: center;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            transform: translateY(-5px);
+            background: #334155;
+        }
+
+        .skill h3 {
+            color: #38bdf8;
+        }
+
+        /* Projects */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .project {
+            background: #1e293b;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        .project h3 {
+            color: #38bdf8;
+            margin-bottom: 10px;
+        }
+
+        .project p {
+            color: #cbd5e1;
+            margin-bottom: 20px;
+        }
+
+        /* Contact */
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            color: #cbd5e1;
+            margin-bottom: 20px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #020617;
+            color: #94a3b8;
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+
+            nav {
+                padding: 0 5%;
+            }
+
+            nav ul {
+                gap: 10px;
+            }
+
+            nav ul li a {
+                font-size: 13px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">MyPortfolio</div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+
+        <div>
+            <h1>Hello, I'm <span>Prasad</span></h1>
+
+            <p>
+                Computer Engineering Student & Aspiring Python Backend Developer
+            </p>
+
+            <a href="#projects" class="btn">
+                View My Projects
+            </a>
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+    <section id="about">
+
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about">
+
+            <p>
+                I am a Computer Engineering student interested in
+                Python, backend development, databases and web technologies.
+                I enjoy building useful projects and continuously improving
+                my programming skills.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Skills -->
+    <section id="skills">
+
+        <h2 class="section-title">My Skills</h2>
+
+        <div class="skills">
+
+            <div class="skill">
+                <h3>Python</h3>
+                <p>Programming & Backend</p>
+            </div>
+
+            <div class="skill">
+                <h3>HTML</h3>
+                <p>Web Structure</p>
+            </div>
+
+            <div class="skill">
+                <h3>CSS</h3>
+                <p>Web Design</p>
+            </div>
+
+            <div class="skill">
+                <h3>SQL</h3>
+                <p>Database Management</p>
+            </div>
+
+            <div class="skill">
+                <h3>Flask</h3>
+                <p>Python Web Framework</p>
+            </div>
+
+            <div class="skill">
+                <h3>Git</h3>
+                <p>Version Control</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Projects -->
+    <section id="projects">
+
+        <h2 class="section-title">My Projects</h2>
+
+        <div class="projects">
+
+            <div class="project">
+
+                <h3>Life Tracker</h3>
+
+                <p>
+                    A personal productivity tracker for monitoring
+                    daily habits and progress.
+                </p>
+
+                <a href="#" class="btn">View Project</a>
+
+            </div>
+
+
+            <div class="project">
+
+                <h3>Weather App</h3>
+
+                <p>
+                    A web application that displays weather information
+                    using an API.
+                </p>
+
+                <a href="#" class="btn">View Project</a>
+
+            </div>
+
+
+            <div class="project">
+
+                <h3>Task Manager</h3>
+
+                <p>
+                    A simple task management application for creating,
+                    completing and managing tasks.
+                </p>
+
+                <a href="#" class="btn">View Project</a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact">
+
+        <h2 class="section-title">Contact Me</h2>
+
+        <div class="contact">
+
+            <p>
+                Interested in working together? Feel free to contact me.
+            </p>
+
+            <a href="mailto:example@gmail.com" class="btn">
+                Email Me
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Prasad. All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+</html>
